@@ -3,7 +3,7 @@ const path = require('path')
 const util = require('util')
 const bundler = require('./bundler')
 
-const tmpPath = '.adminbro'
+const tmpPath = process.env.ADMIN_BRO_ENTIRY_DIR || '.adminbro';
 const entryPath = path.join(tmpPath, '.entry.js')
 const outPath = path.join(tmpPath, 'bundle.js')
 const generateEntry = require('./generate-user-component-entry')
